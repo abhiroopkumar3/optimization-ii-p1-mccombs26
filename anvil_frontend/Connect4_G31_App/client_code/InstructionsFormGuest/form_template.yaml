@@ -1,0 +1,175 @@
+components:
+- layout_properties: {grid_position: 'WMEUIK,LLZNJP'}
+  name: label_3
+  properties:
+    align: center
+    background: ''
+    bold: true
+    font: Agency FB
+    font_size: 65
+    foreground: '#1a237e'
+    role: null
+    text: |
+      Gameplay Guidelines
+  type: Label
+- components:
+  - layout_properties: {grid_position: 'HGZVRO,FLWSPV'}
+    name: instructions_text_1
+    properties:
+      border: ''
+      content: "### 🎮 How to Play Connect 4\n\nWelcome to the Connect 4 AI Challenge!  \nThis game allows you to compete against intelligent bots of varying difficulty levels. The objective is simple — connect four of your pieces before the bot does."
+      font: Verdana
+      font_size: 16
+    type: RichText
+  - layout_properties: {grid_position: 'GEUSWH,NLMBAL'}
+    name: instructions_text_2
+    properties:
+      border: ''
+      content: |-
+        #### 🟡 1. Make Your Move
+
+        - Click one of the **numbered column buttons (0–6)** at the top.
+        - Your piece (🟡 Yellow) will drop into the lowest available slot.
+        - You **cannot click the grid boxes directly**.
+        - If a column is full, choose a different column.
+      font: Verdana
+      font_size: 16
+    type: RichText
+  - layout_properties: {grid_position: 'OLTSEZ,IFTSIU'}
+    name: make_move
+    properties: {display_mode: fill_width, source: _/theme/01 - Make Your Move.png}
+    type: Image
+  - layout_properties: {grid_position: 'CLCGGB,BAMQUX'}
+    name: instructions_text_3
+    properties:
+      border: ''
+      content: |-
+        #### 🔴 2. Understand the Pieces
+
+        - 🟡 **Yellow pieces** represent YOU.
+        - 🔴 **Red pieces** represent the BOT.
+        - Pieces stack vertically from the bottom up.
+        - Once placed, pieces cannot be moved.
+      font: Verdana
+      font_size: 16
+    type: RichText
+  - layout_properties: {grid_position: 'LSJSEN,ORZEZQ'}
+    name: understand_pieces
+    properties: {display_mode: fill_width, source: _/theme/02 - Understand the Pieces.png}
+    type: Image
+  - layout_properties: {grid_position: 'XEKMQY,UTYTTB'}
+    name: instructions_text_4
+    properties:
+      border: ''
+      content: |-
+        #### 🧠 3. Objective of the Game
+
+        To win, you must connect **four pieces in a row**:
+
+        - Horizontally
+        - Vertically
+        - Diagonally (both directions)
+
+        The first player to connect four wins instantly.
+      font: Verdana
+      font_size: 16
+    type: RichText
+  - layout_properties: {grid_position: 'IYAXXC,HYLVRB'}
+    name: objective_of_game
+    properties: {display_mode: fill_width, source: _/theme/03 - Objective of the Game.png}
+    type: Image
+  - layout_properties: {grid_position: 'EAMEYA,YVNCDS'}
+    name: instructions_text_5
+    properties:
+      border: ''
+      content: |-
+        #### 🤖 4. Choose Your Difficulty
+
+        Before starting a game, select a difficulty level:
+
+        - **Easy** – Random move selection (beginner-friendly)
+        - **Medium** – Transformer-based AI (balanced challenge)
+        - **Hard** – CNN-based AI (advanced strategic opponent)
+
+        Each difficulty tracks its own statistics.
+      font: Verdana
+      font_size: 16
+    type: RichText
+  - layout_properties: {grid_position: 'FVVQJL,HYAMCA'}
+    name: choose_difficulty
+    properties: {display_mode: zoom_to_fill, source: _/theme/04 - Choose Your Difficulty.png}
+    type: Image
+  - layout_properties: {grid_position: 'SFNSTM,BVIBQV'}
+    name: instructions_text_6
+    properties:
+      border: ''
+      content: |-
+        #### 📊 5. Game Results & Statistics
+
+        After each game:
+
+        - A popup will show the game result.
+        - Your statistics update automatically.
+        - Stats are tracked separately for each difficulty level.
+      font: Verdana
+      font_size: 16
+    type: RichText
+  - layout_properties: {grid_position: 'WEDIBL,NSSPUO'}
+    name: game_results
+    properties: {display_mode: shrink_to_fit, source: _/theme/05a - Game Results.png, visible: true}
+    type: Image
+  - layout_properties: {grid_position: 'WEDIBL,DLZTVH'}
+    name: game_statistics
+    properties: {display_mode: zoom_to_fill, source: _/theme/05b - Game Statistics.png}
+    type: Image
+  - layout_properties: {grid_position: 'BOQKST,UZVYAD'}
+    name: instructions_text_7
+    properties:
+      border: ''
+      content: |-
+        #### 🔁 6. Ending or Restarting
+
+        - Click **New Game** to start again.
+        - Click **End Game** to terminate the current match.
+        - Make sure a difficulty is selected before starting.
+      font: Verdana
+      font_size: 16
+    type: RichText
+  - layout_properties: {grid_position: 'LBYRVN,WZMYPL'}
+    name: ending_restarting
+    properties: {display_mode: fill_width, height: 120.60000610351562, source: _/theme/06 - Ending or Restarting.png}
+    type: Image
+  - layout_properties: {grid_position: 'BMJUGE,JBKCOV'}
+    name: instructions_text_8
+    properties:
+      border: ''
+      content: |-
+        #### 💡 Pro Tip
+
+        `Think ahead and block your opponent’s potential 4-in-a-row before building your own!`
+      font: Verdana
+      font_size: 16
+    type: RichText
+  layout_properties: {grid_position: 'QNJRNN,BGJIWA'}
+  name: instructions_panel
+  properties: {background: '#c1dcf0', border: '0.5px solid #b0bec5'}
+  type: ColumnPanel
+- components:
+  - event_bindings: {}
+    layout_properties: {}
+    name: back_button
+    properties: {background: '#f5fcff', bold: true, font: Verdana, font_size: 14, foreground: '#0288d1', role: outlined-button, text: Back to Game}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: exit_button
+    properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: outlined-button, text: Exit}
+    type: Button
+  layout_properties: {grid_position: 'TONYYQ,ZKPBTS'}
+  name: flow_panel_1
+  properties: {align: center}
+  type: FlowPanel
+container:
+  properties: {background: '#E1F5FE'}
+  type: ColumnPanel
+is_package: true

@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  anvil-uplink:
+    restart: always
+    container_name: anvil-uplink
+    build:
+      context: .
+    environment:
+      - ANVIL_UPLINK_KEY=server_XX265QFCPCQ5OVWRBJNDUKBM-A5YOXSRTDDAYATEU
+      - MODEL_DIR=/models
+    volumes:
+      - ./models:/models:ro
+  anvil-uplink-tx:
+    restart: always
+    container_name: anvil-uplink-tx
+    build:
+      context: .
+      dockerfile: Dockerfile.tx
+    environment:
+      - ANVIL_UPLINK_KEY=server_XX265QFCPCQ5OVWRBJNDUKBM-A5YOXSRTDDAYATEU
+      - MODEL_DIR=/models
+    volumes:
+      - ./models:/models:ro

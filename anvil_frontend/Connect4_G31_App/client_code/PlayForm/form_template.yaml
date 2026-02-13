@@ -1,0 +1,660 @@
+components:
+- layout_properties: {grid_position: 'XCPYUD,ATFWTF'}
+  name: label_45
+  properties:
+    align: center
+    background: ''
+    bold: true
+    font: Agency FB
+    font_size: 65
+    foreground: '#1a237e'
+    role: null
+    text: |
+      Play the Game Now!
+  type: Label
+- components:
+  - components:
+    - layout_properties: {}
+      name: label_1
+      properties: {font: Verdana, font_size: 16, text: 'Select the model to play against:'}
+      type: Label
+    - data_bindings: []
+      layout_properties: {width: 206.79998779296875}
+      name: model_dropdown
+      properties:
+        background: '#9dbac8'
+        border: '0.5px solid #b0bec5'
+        font: Verdana
+        font_size: 16
+        foreground: '#ffffff'
+        include_placeholder: true
+        italic: false
+        items: []
+        placeholder: ''
+        tooltip: ''
+      type: DropDown
+    - event_bindings: {}
+      layout_properties: {}
+      name: dpdwn_options_icon
+      properties: {align: center, font: verdana, font_size: 26, foreground: '#26358C', icon: 'fa:question-circle-o', icon_align: left_edge, text: ''}
+      type: Button
+    layout_properties: {grid_position: 'ZJAXZT,XSYYDN'}
+    name: flow_panel_2
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - event_bindings: {}
+      layout_properties: {}
+      name: new_game_button
+      properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: outlined-button, text: New Game}
+      type: Button
+    - event_bindings: {}
+      layout_properties: {}
+      name: end_game_button
+      properties: {background: '#f5fcff', bold: true, font: Verdana, font_size: 14, foreground: '#0288d1', role: outlined-button, text: End Game}
+      type: Button
+    layout_properties: {grid_position: 'UXVVNO,TCPZDL'}
+    name: flow_panel_5
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: gameplay_instructions_button
+      properties: {bold: true, font: Verdana, font_size: 16, foreground: '#26358C', text: 'Don''t know how to play? Click here!'}
+      type: Button
+    layout_properties: {grid_position: 'RXHSTH,QLGAME'}
+    name: flow_panel_7
+    properties: {align: center}
+    type: FlowPanel
+  layout_properties: {grid_position: 'DJXQEO,JXVGHM'}
+  name: column_panel_1
+  properties: {background: '#c1dcf0', border: '0.5px solid #b0bec5'}
+  type: ColumnPanel
+- components:
+  - layout_properties: {}
+    name: status_label
+    properties:
+      align: center
+      background: ''
+      bold: true
+      border: ''
+      font: Courier New
+      font_size: null
+      foreground: '#ffffff'
+      italic: false
+      role: [title]
+      text: Click 'New Game' to start
+    type: Label
+  layout_properties: {grid_position: 'FSHQVR,VJICSQ'}
+  name: flow_panel_4
+  properties: {align: center, background: '#26358C', border: '0.5px solid #b0bec5'}
+  type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'UEQAXF,BDKJQJ'}
+    name: spacer_3
+    properties: {height: '32'}
+    type: Spacer
+  - components:
+    - components:
+      - data_bindings: []
+        layout_properties: {}
+        name: col0_button
+        properties:
+          background: theme:Error
+          bold: true
+          font: Verdana
+          font_size: 14
+          role: [outlined-button, elevated-button, tonal-button]
+          spacing:
+            margin: [null, '10', null, '0']
+            padding: [null, '15', null, '15']
+          text: '0'
+        type: Button
+      - layout_properties: {}
+        name: col1_button
+        properties:
+          background: theme:Error
+          bold: true
+          font: Verdana
+          font_size: 14
+          role: [elevated-button, tonal-button, outlined-button]
+          spacing:
+            margin: [null, '10', null, null]
+            padding: [null, '15', null, '15']
+          text: '1'
+        type: Button
+      - layout_properties: {}
+        name: col2_button
+        properties:
+          background: theme:Error
+          bold: true
+          font: Verdana
+          font_size: 14
+          role: [elevated-button, tonal-button, outlined-button]
+          spacing:
+            margin: [null, '10', null, null]
+            padding: [null, '15', null, '15']
+          text: '2'
+        type: Button
+      - layout_properties: {}
+        name: col3_button
+        properties:
+          background: theme:Error
+          bold: true
+          font: Verdana
+          font_size: 14
+          role: [elevated-button, outlined-button, tonal-button]
+          spacing:
+            margin: [null, '10', null, null]
+            padding: [null, '15', null, '15']
+          text: '3'
+        type: Button
+      - layout_properties: {}
+        name: col4_button
+        properties:
+          background: theme:Error
+          bold: true
+          font: Verdana
+          font_size: 14
+          role: [elevated-button, outlined-button, tonal-button]
+          spacing:
+            margin: [null, '10', null, null]
+            padding: [null, '15', null, '15']
+          text: '4'
+        type: Button
+      - layout_properties: {}
+        name: col5_button
+        properties:
+          background: theme:Error
+          bold: true
+          font: Verdana
+          font_size: 14
+          role: [elevated-button, outlined-button, tonal-button]
+          spacing:
+            margin: [null, '10', null, null]
+            padding: [null, '15', null, '15']
+          text: '5'
+        type: Button
+      - layout_properties: {}
+        name: col6_button
+        properties:
+          background: theme:Error
+          bold: true
+          font: Verdana
+          font_size: 14
+          role: [outlined-button, tonal-button, elevated-button]
+          spacing:
+            margin: [null, '0', null, null]
+            padding: [null, '15', null, '15']
+          text: '6'
+        type: Button
+      layout_properties: {grid_position: 'ZWUPMK,XWXZXA'}
+      name: flow_panel_1
+      properties:
+        align: center
+        border: ''
+        spacing:
+          margin: [null, '', null, '10']
+          padding: [null, '0', null, '0']
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: label_2
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, '']
+            padding: ['8', null, '8', null]
+        type: Label
+      - layout_properties: {}
+        name: label_3
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_4
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_5
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_6
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_7
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_8
+        properties:
+          align: center
+          spacing:
+            margin: [null, '0', null, null]
+        type: Label
+      layout_properties: {full_width_row: false, grid_position: 'KRVXRV,XZJKMK'}
+      name: row0_flow
+      properties:
+        align: center
+        spacing:
+          margin: [null, null, null, '10']
+        vertical_align: full
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: label_9
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_10
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_11
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_12
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_13
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_14
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_15
+        properties: {align: center}
+        type: Label
+      layout_properties: {grid_position: 'PQZRUC,HVPVIY'}
+      name: row1_flow
+      properties:
+        align: center
+        spacing:
+          margin: [null, null, null, '10']
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: label_16
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_17
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_18
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_19
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_20
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_21
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_22
+        properties: {align: center}
+        type: Label
+      layout_properties: {grid_position: 'KGCZXW,ISFPUM'}
+      name: row2_flow
+      properties:
+        align: center
+        spacing:
+          margin: [null, null, null, '10']
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: label_23
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_24
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_25
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_26
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_27
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_28
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_29
+        properties: {align: center}
+        type: Label
+      layout_properties: {grid_position: 'ZIJEQX,MGDLDE'}
+      name: row3_flow
+      properties:
+        align: center
+        spacing:
+          margin: [null, null, null, '10']
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: label_30
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_31
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_32
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_33
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_34
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_35
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_36
+        properties: {align: center}
+        type: Label
+      layout_properties: {grid_position: 'NJKCPX,HQPFSQ'}
+      name: row4_flow
+      properties:
+        align: center
+        spacing:
+          margin: [null, null, null, '10']
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: label_37
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_38
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_39
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_40
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_41
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_42
+        properties:
+          align: center
+          spacing:
+            margin: [null, '5', null, null]
+        type: Label
+      - layout_properties: {}
+        name: label_43
+        properties: {align: center}
+        type: Label
+      layout_properties: {grid_position: 'WDWQJX,EXJKDC'}
+      name: row5_flow
+      properties:
+        align: center
+        spacing:
+          margin: [null, null, null, '10']
+      type: FlowPanel
+    layout_properties: {grid_position: 'UEQAXF,CAQKLW'}
+    name: board_bg
+    properties:
+      background: '#003366'
+      border: 0.5px solid blue
+      role: [elevated-card, outlined-card, tonal-card]
+      spacing:
+        margin: [null, '0', null, '0']
+        padding: [null, '-50', null, '0']
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'UEQAXF,DGUCHX'}
+    name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+  data_bindings: []
+  event_bindings: {}
+  layout_properties: {full_width_row: false, grid_position: 'RDWGYS,IXZLOX', row_background: ''}
+  name: board_panel
+  properties:
+    background: ''
+    border: ''
+    col_spacing: medium
+    col_widths: '{"BDKJQJ":15,"CAQKLW":30,"DGUCHX":15}'
+    role: null
+    spacing:
+      margin: [null, '0', null, '0']
+  type: ColumnPanel
+- components:
+  - layout_properties: {grid_position: 'KGKBHR,HTGXXQ'}
+    name: label_44
+    properties:
+      align: center
+      background: ''
+      bold: true
+      border: ''
+      font: Verdana
+      font_size: null
+      foreground: ''
+      role: [title]
+      text: Overall Game Results
+    type: Label
+  - components:
+    - components:
+      - layout_properties: {grid_position: 'MJJGJF,HXQEBE'}
+        name: label_46
+        properties: {align: center, bold: true, border: '', font: Verdana, font_size: 16, foreground: '', text: EASY, underline: false}
+        type: Label
+      - layout_properties: {grid_position: 'XYTZGU,CNRKNB'}
+        name: stats_text_easy
+        properties:
+          align: center
+          background: ''
+          border: ''
+          font: Verdana
+          font_size: 16
+          foreground: ''
+          role: [body]
+          text: ''
+        type: Label
+      layout_properties: {}
+      name: column_panel_3
+      properties: {border: '0.5px solid #26358C'}
+      type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'EPPFIZ,FFXNFW'}
+        name: label_47
+        properties: {align: center, bold: true, font: Verdana, font_size: 16, foreground: '', text: MEDIUM}
+        type: Label
+      - layout_properties: {grid_position: 'XWIAIM,JMDVXR'}
+        name: stats_text_medium
+        properties:
+          align: center
+          background: ''
+          border: ''
+          font: Verdana
+          font_size: 16
+          foreground: ''
+          role: [body]
+          text: ''
+        type: Label
+      layout_properties: {}
+      name: column_panel_4
+      properties: {background: '', border: '0.5px solid #26358C'}
+      type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'DLDZOI,WNDXXA'}
+        name: label_48
+        properties: {align: center, bold: true, font: Verdana, font_size: 16, foreground: '', text: HARD}
+        type: Label
+      - layout_properties: {grid_position: 'LRSEVC,OSDXFW'}
+        name: stats_text_hard
+        properties:
+          align: center
+          background: ''
+          border: ''
+          font: Verdana
+          font_size: 16
+          foreground: ''
+          role: [body]
+          text: ''
+        type: Label
+      layout_properties: {}
+      name: column_panel_5
+      properties: {background: '', border: '0.5px solid #26358C'}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'EYTRLQ,NFCPGI'}
+    name: flow_panel_6
+    properties: {align: center, background: ''}
+    type: FlowPanel
+  layout_properties: {grid_position: 'CKZHKU,HSFCIQ'}
+  name: column_panel_2
+  properties: {background: '#c1dcf0', border: '0.5px solid #b0bec5'}
+  type: ColumnPanel
+- components:
+  - event_bindings: {}
+    layout_properties: {}
+    name: back_button
+    properties: {background: '#f5fcff', bold: true, font: Verdana, font_size: 14, foreground: '#0288d1', role: outlined-button, text: Back to Dashboard}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: logout_button
+    properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: outlined-button, text: Logout}
+    type: Button
+  layout_properties: {grid_position: 'COPDXY,ZAHJXL'}
+  name: flow_panel_3
+  properties: {align: center}
+  type: FlowPanel
+container:
+  properties: {background: '#E1F5FE'}
+  type: ColumnPanel
+is_package: true

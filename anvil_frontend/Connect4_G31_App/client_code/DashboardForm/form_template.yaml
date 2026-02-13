@@ -1,0 +1,76 @@
+components:
+- layout_properties: {grid_position: 'JZKNBL,IOYMXX'}
+  name: label_3
+  properties:
+    align: center
+    background: ''
+    bold: true
+    font: Agency FB
+    font_size: 65
+    foreground: '#1a237e'
+    role: null
+    text: |
+      Welcome.
+  type: Label
+- data_bindings: []
+  layout_properties: {grid_position: 'IKADBI,NGXXTD'}
+  name: label_2
+  properties:
+    align: center
+    background: '#26358C'
+    border: ''
+    font: Verdana
+    font_size: 16
+    foreground: '#ffffff'
+    icon: fa:group
+    italic: true
+    role: [input-prompt]
+    text: 'Group 31: Abhiroop Kumar, Frank Rong, Kristen Lowe, Lena Weissman'
+  type: Label
+- components:
+  - layout_properties: {grid_position: 'UCGECP,BLASRO'}
+    name: placeholder_text_1
+    properties:
+      align: left
+      background: ''
+      border: ''
+      content: "#### 🎯 Connect4.ai – AI-Powered Game Agent Platform\n\nWelcome to **Connect4.ai**, an interactive Connect 4 application designed to demonstrate applied machine learning in a real-time gameplay environment. This project integrates multiple AI agents of increasing complexity:  \n`Easy (Random), Medium (Transformer-based), and Hard (CNN-based)`  \n\nThe backend models are deployed via a containerized architecture using **Docker** on **AWS**, with inference handled through a secure server uplink. The application showcases:  \n\n* **Real-time AI inference** across CNN and Transformer architectures\n* **Containerized ML deployment** using Docker and secure server uplink\n* Integrated user authentication and **difficulty-based performance tracking**\n\n```txt\nSelect a difficulty level and experience how different AI architectures approach strategic decision-making in Connect 4.\n```\n"
+      font: Verdana
+      font_size: 14
+    type: RichText
+  layout_properties: {grid_position: 'REKWDI,IKQPKS'}
+  name: placeholder_panel
+  properties: {background: '#c1dcf0', border: '0.5px solid #b0bec5'}
+  type: ColumnPanel
+- components:
+  - event_bindings: {}
+    layout_properties: {}
+    name: writeup_button
+    properties:
+      background: '#f5fcff'
+      bold: true
+      font: Verdana
+      font_size: 14
+      foreground: '#0288d1'
+      role: [outlined-button]
+      text: About the Project
+    type: Button
+  - data_bindings: []
+    event_bindings: {}
+    layout_properties: {}
+    name: play_button
+    properties: {background: '#f5fcff', bold: true, font: Verdana, font_size: 14, foreground: '#0288d1', role: outlined-button, text: Play Game}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: logout_button
+    properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: outlined-button, text: Logout}
+    type: Button
+  layout_properties: {grid_position: 'PRQODA,DEFAOK'}
+  name: flow_panel_1
+  properties: {align: center}
+  type: FlowPanel
+container:
+  properties: {background: '#E1F5FE', border: ''}
+  type: ColumnPanel
+is_package: true

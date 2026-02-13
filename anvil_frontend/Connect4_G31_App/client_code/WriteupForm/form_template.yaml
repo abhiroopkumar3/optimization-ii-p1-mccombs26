@@ -1,0 +1,41 @@
+components:
+- layout_properties: {grid_position: 'YDBCGB,ZEIBUC'}
+  name: label_3
+  properties:
+    align: center
+    background: ''
+    bold: true
+    font: Agency FB
+    font_size: 65
+    foreground: '#1a237e'
+    role: null
+    text: |
+      A Write-up of the Project - Connect4
+  type: Label
+- components:
+  - layout_properties: {grid_position: 'HGZVRO,FLWSPV'}
+    name: report_text_1
+    properties: {border: '', content: REPORT PLACEHOLDER, font: Verdana, font_size: 16}
+    type: RichText
+  layout_properties: {grid_position: 'ODTDGI,BBLRND'}
+  name: report_panel
+  properties: {border: '0.5px solid #b0bec5'}
+  type: ColumnPanel
+- components:
+  - layout_properties: {}
+    name: back_button
+    properties: {background: '#f5fcff', bold: true, font: Verdana, font_size: 14, foreground: '#0288d1', role: outlined-button, text: Back to Dashboard}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: logout_button
+    properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: outlined-button, text: Logout}
+    type: Button
+  layout_properties: {grid_position: 'QBXTEN,JFWOEN'}
+  name: flow_panel_1
+  properties: {align: center}
+  type: FlowPanel
+container:
+  properties: {background: '#E1F5FE'}
+  type: ColumnPanel
+is_package: true
