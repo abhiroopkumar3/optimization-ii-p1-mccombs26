@@ -96,6 +96,7 @@ components:
               padding: [null, '4', null, '4']
             text: Forgot Password?
             tooltip: ''
+            underline: true
             visible: true
           type: Button
         - layout_properties: {}
@@ -119,6 +120,7 @@ components:
               padding: [null, '4', null, '4']
             text: Guest? Click here to Play!
             tooltip: This feature is not available at the moment
+            underline: true
             visible: true
           type: Button
         layout_properties: {grid_position: 'WGYREY,ZGNBGA'}

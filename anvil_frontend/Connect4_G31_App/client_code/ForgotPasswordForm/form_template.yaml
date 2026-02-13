@@ -129,7 +129,7 @@ components:
   - event_bindings: {}
     layout_properties: {}
     name: back_button
-    properties: {align: center, bold: true, enabled: true, font: Verdana, font_size: 14, foreground: '#0288d1', icon: '', icon_align: top, text: Back to Login, visible: true}
+    properties: {align: center, bold: true, enabled: true, font: Verdana, font_size: 14, foreground: '#0288d1', icon: '', icon_align: top, text: Back to Login, underline: true, visible: true}
     type: Button
   layout_properties: {grid_position: 'ACVEQA,XZBWDP'}
   name: flow_panel_5

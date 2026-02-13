@@ -61,7 +61,7 @@ components:
     - event_bindings: {}
       layout_properties: {}
       name: gameplay_instructions_button
-      properties: {bold: true, font: Verdana, font_size: 16, foreground: '#26358C', text: 'Don''t know how to play? Click here!'}
+      properties: {bold: true, font: Verdana, font_size: 16, foreground: '#26358C', text: 'Don''t know how to play? Click here!', underline: true}
       type: Button
     layout_properties: {grid_position: 'RXHSTH,QLGAME'}
     name: flow_panel_7
