@@ -83,12 +83,18 @@ components:
           name: login_button
           properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: null, text: Log In}
           type: Button
-        - components: []
-          event_bindings: {}
-          layout_properties: {}
+        - layout_properties: {}
           name: forgot_password
-          properties: {align: center, font: Verdana, font_size: 14, foreground: '#0288d1', role: null, text: Guest Login, url: ''}
-          type: Link
+          properties:
+            enabled: false
+            font: Verdana
+            font_size: 14
+            foreground: '#0288d1'
+            spacing:
+              padding: [null, '4', null, '4']
+            text: Guest Login
+            tooltip: This feature is not available at the moment
+          type: Button
         - layout_properties: {}
           name: spacer_3
           properties: {height: 32}
