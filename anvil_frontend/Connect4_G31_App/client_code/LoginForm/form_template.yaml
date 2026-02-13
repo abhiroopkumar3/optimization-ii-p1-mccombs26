@@ -100,7 +100,7 @@ components:
           type: Button
         - layout_properties: {}
           name: github_link
-          properties: {align: right, bold: true, font: Verdana, font_size: 30, foreground: '#0288d1', icon: 'fa:github', icon_align: right, url: 'https://github.com'}
+          properties: {align: right, bold: true, font: Verdana, font_size: 30, foreground: '#0288d1', icon: 'fa:github', icon_align: right, url: 'https://github.com/abhiroopkumar3/optimization-ii-p1-mccombs26'}
           type: Link
         layout_properties: {grid_position: 'JLDLBT,KMAFLC'}
         name: flow_panel_4
