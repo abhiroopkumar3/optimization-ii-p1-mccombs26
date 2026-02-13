@@ -36,7 +36,7 @@ components:
     - event_bindings: {}
       layout_properties: {}
       name: dpdwn_options_icon
-      properties: {align: center, font: verdana, font_size: 26, foreground: '#26358C', icon: 'fa:question-circle-o', icon_align: left_edge, text: ''}
+      properties: {align: center, font: verdana, font_size: 16, foreground: '#26358C', icon: 'fa:question-circle-o', icon_align: left_edge, text: ''}
       type: Button
     layout_properties: {grid_position: 'ZJAXZT,XSYYDN'}
     name: flow_panel_2

@@ -13,6 +13,7 @@ unique_ids:
     theme.css: PVDKLSXHWPWF755RWJG3XSL4DGN5A4OL
   forms:
     DashboardForm: '177076722326641018306359.19146'
+    ForgotPasswordForm: '1770998379914442272785830.3228'
     InstructionsForm: '1770923622294999167895161.1483'
     InstructionsFormGuest: '1770942798853530594570796.5034'
     LoginForm: '1770744187830551472504303.999'
@@ -26,4 +27,5 @@ unique_ids:
     WriteupForm: '1770748952751790663700563.5157'
   modules: {}
   scripts: {}
-  server_modules: {}
+  server_modules:
+    server_auth: '177100125742996073306343.04056'

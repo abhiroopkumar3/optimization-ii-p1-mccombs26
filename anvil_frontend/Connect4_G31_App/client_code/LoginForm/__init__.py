@@ -15,22 +15,41 @@ class LoginForm(LoginFormTemplate):
 
   @handle("login_button", "click")
   def login_button_click(self, **event_args):
-    # 1) Read what the user typed
-    username = (self.username_box.text or "").strip()
+    # 1) Read user input
+    username = (self.username_box.text or "").strip().lower()
     password = (self.password_box.text or "")
   
-    # 2) Look up user in Users table
+    # 2) Look up user
     user = app_tables.users.get(email=username)
   
     # 3) Validate credentials
     if user and user['password_hash'] == password:
+  
+      # Block dummy user after successful validation
+      if username == "resetpwd":
+        alert(
+          "Login is successful.\n\nUnfortunately, this is a dummy account.",
+          title="Access Restricted",
+          buttons=[("OK", True)]
+        )
+        return
+  
+      # Normal users
       time.sleep(0.5)
       open_form("DashboardForm")
+
     else:
       alert("Incorrect username or password.")
 
-  @handle("forgot_password", "click")
-  def forgot_password_click(self, **event_args):
+
+  @handle("guest_gameplay", "click")
+  def guest_gameplay_click(self, **event_args):
     """This method is called when the link is clicked"""
     time.sleep(0.5)
     open_form("PlayFormGuest")
+
+  @handle("forgot_password", "click")
+  def forgot_password_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    time.sleep(0.5)
+    open_form('ForgotPasswordForm')

@@ -7,7 +7,7 @@ services:
     build:
       context: .
     environment:
-      - ANVIL_UPLINK_KEY=server_XX265QFCPCQ5OVWRBJNDUKBM-A5YOXSRTDDAYATEU
+      - ANVIL_UPLINK_KEY=********************************************* # key value hidden for security reasons
       - MODEL_DIR=/models
     volumes:
       - ./models:/models:ro
@@ -18,7 +18,7 @@ services:
       context: .
       dockerfile: Dockerfile.tx
     environment:
-      - ANVIL_UPLINK_KEY=server_XX265QFCPCQ5OVWRBJNDUKBM-A5YOXSRTDDAYATEU
+      - ANVIL_UPLINK_KEY=********************************************* # key value hidden for security reasons
       - MODEL_DIR=/models
     volumes:
       - ./models:/models:ro

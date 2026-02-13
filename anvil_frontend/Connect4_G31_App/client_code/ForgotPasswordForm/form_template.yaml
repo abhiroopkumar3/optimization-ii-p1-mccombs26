@@ -1,0 +1,141 @@
+components:
+- layout_properties: {grid_position: 'GXKRCD,NUJUOJ'}
+  name: label_45
+  properties:
+    align: center
+    background: ''
+    bold: true
+    font: Agency FB
+    font_size: 65
+    foreground: '#1a237e'
+    role: null
+    text: |
+      Reset your Password
+  type: Label
+- components:
+  - components:
+    - components:
+      - layout_properties: {}
+        name: user_label
+        properties: {align: left, font: Verdana, font_size: 16, text: 'Enter username:'}
+        type: Label
+      - layout_properties: {}
+        name: user_box
+        properties: {background: '#ffffff', font: Verdana, font_size: 14, italic: false}
+        type: TextBox
+      - event_bindings: {}
+        layout_properties: {}
+        name: info_icon_button
+        properties: {bold: true, font: Verdana, font_size: 16, foreground: '#0288d1', icon: 'fa:info-circle', icon_align: left_edge, text: ''}
+        type: Button
+      layout_properties: {grid_position: 'UKLAXO,YPSYOK'}
+      name: flow_panel_1
+      properties: {align: center}
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: retrieve_button
+        properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', text: Reset Password}
+        type: Button
+      - event_bindings: {}
+        layout_properties: {}
+        name: change_user_button
+        properties: {enabled: true, font: Verdana, font_size: 14, foreground: '#0288d1', text: Change User, visible: false}
+        type: Button
+      layout_properties: {grid_position: 'WWKJFU,WIHEZC'}
+      name: flow_panel_2
+      properties: {align: center}
+      type: FlowPanel
+    layout_properties: {grid_position: 'KLJGGE,NIIBDP'}
+    name: column_panel_2
+    properties: {border: ''}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'PCYIBA,FNGUAN'}
+      name: security_question_heading
+      properties: {align: center, background: '', content: '### Security Question:', font: Verdana}
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: security_question_label
+        properties: {align: left, font: Verdana, font_size: 16}
+        type: Label
+      - layout_properties: {}
+        name: answer_box
+        properties: {background: '#ffffff', font: Verdana, font_size: 14, type: text}
+        type: TextBox
+      layout_properties: {grid_position: 'ZXAIIK,XMWNRB'}
+      name: flow_panel_6
+      properties: {align: center}
+      type: FlowPanel
+    - layout_properties: {grid_position: 'ABVNTP,QGODRX'}
+      name: submit_button
+      properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', text: Submit}
+      type: Button
+    layout_properties: {grid_position: 'ULSABQ,FTQMHD'}
+    name: security_panel
+    properties: {background: '#9dbac8', visible: false}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'BCWXLL,JAQNYC'}
+      name: security_question_heading_2
+      properties: {align: center, background: '', content: '### Set New Password:', font: Verdana}
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: new_password_label
+        properties: {font: Verdana, font_size: 16, text: '                 New password:'}
+        type: Label
+      - layout_properties: {}
+        name: new_password_box
+        properties: {background: '#ffffff', font: Verdana, font_size: 14, hide_text: true}
+        type: TextBox
+      - event_bindings: {}
+        layout_properties: {}
+        name: pwd_criteria_icon_button
+        properties: {bold: true, font: Verdana, font_size: 16, foreground: '#0288d1', icon: 'fa:question-circle', icon_align: left_edge, text: ''}
+        type: Button
+      layout_properties: {grid_position: 'XXYAMY,WMFXOG'}
+      name: flow_panel_3
+      properties: {align: center}
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: confirm_password_label
+        properties: {font: Verdana, font_size: 16, text: 'Confirm password:'}
+        type: Label
+      - event_bindings: {}
+        layout_properties: {}
+        name: confirm_password_box
+        properties: {background: '#ffffff', font: Verdana, font_size: 14, hide_text: true}
+        type: TextBox
+      layout_properties: {grid_position: 'YMCRWY,JDXAEU'}
+      name: flow_panel_4
+      properties: {align: center}
+      type: FlowPanel
+    - layout_properties: {grid_position: 'QZJSFJ,EMHYLL'}
+      name: reset_password_button
+      properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#fcfcfc', text: Set New Password}
+      type: Button
+    layout_properties: {grid_position: 'DWPNCB,JFZRRP'}
+    name: reset_panel
+    properties: {background: '#9dbac8', visible: false}
+    type: ColumnPanel
+  layout_properties: {grid_position: 'DVKJBJ,SGKCES'}
+  name: column_panel_1
+  properties: {background: '#c1dcf0', border: '0.5px solid #b0bec5'}
+  type: ColumnPanel
+- components:
+  - event_bindings: {}
+    layout_properties: {}
+    name: back_button
+    properties: {align: center, bold: true, enabled: true, font: Verdana, font_size: 14, foreground: '#0288d1', icon: '', icon_align: top, text: Back to Login, visible: true}
+    type: Button
+  layout_properties: {grid_position: 'ACVEQA,XZBWDP'}
+  name: flow_panel_5
+  properties: {align: center}
+  type: FlowPanel
+container:
+  properties: {background: '#E1F5FE'}
+  type: ColumnPanel
+is_package: true

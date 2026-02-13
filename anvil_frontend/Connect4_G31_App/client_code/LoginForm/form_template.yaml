@@ -49,7 +49,7 @@ components:
           - data_bindings: []
             layout_properties: {width: 188.7879267578125}
             name: username_box
-            properties: {align: left, background: 'theme:Surface', font: Verdana, font_size: 14, hide_text: false, placeholder: '', tooltip: ''}
+            properties: {align: left, background: '#ffffff', font: Verdana, font_size: 14, hide_text: false, placeholder: '', tooltip: ''}
             type: TextBox
           layout_properties: {grid_position: 'SPISHF,JOYBDN'}
           name: flow_panel_1
@@ -66,7 +66,7 @@ components:
             type: Spacer
           - layout_properties: {width: 188.8000244140625}
             name: password_box
-            properties: {align: left, background: 'theme:Surface', font: Verdana, font_size: 14, hide_text: true, placeholder: ''}
+            properties: {align: left, background: '#ffffff', font: Verdana, font_size: 14, hide_text: true, placeholder: ''}
             type: TextBox
           layout_properties: {grid_position: 'TQKDPA,SASYHW'}
           name: flow_panel_2
@@ -83,45 +83,47 @@ components:
           name: login_button
           properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: null, text: Log In}
           type: Button
-        - layout_properties: {}
+        - event_bindings: {}
+          layout_properties: {}
           name: forgot_password
           properties:
+            bold: false
+            enabled: true
+            font: Verdana
+            font_size: 14
+            foreground: '#0288d1'
+            spacing:
+              padding: [null, '4', null, '4']
+            text: Forgot Password?
+            tooltip: ''
+            visible: true
+          type: Button
+        - layout_properties: {}
+          name: github_link
+          properties: {align: right, bold: true, font: Verdana, font_size: 30, foreground: '#0288d1', icon: 'fa:github', icon_align: right, url: 'https://github.com'}
+          type: Link
+        layout_properties: {grid_position: 'JLDLBT,KMAFLC'}
+        name: flow_panel_4
+        properties: {}
+        type: FlowPanel
+      - components:
+        - layout_properties: {}
+          name: guest_gameplay
+          properties:
+            bold: false
             enabled: false
             font: Verdana
             font_size: 14
             foreground: '#0288d1'
             spacing:
               padding: [null, '4', null, '4']
-            text: Guest Login
+            text: Guest? Click here to Play!
             tooltip: This feature is not available at the moment
+            visible: true
           type: Button
-        - layout_properties: {}
-          name: spacer_3
-          properties: {height: 32}
-          type: Spacer
-        - layout_properties: {}
-          name: spacer_4
-          properties: {height: 32}
-          type: Spacer
-        - layout_properties: {}
-          name: spacer_5
-          properties: {height: 32}
-          type: Spacer
-        - layout_properties: {}
-          name: spacer_6
-          properties: {height: 32}
-          type: Spacer
-        - layout_properties: {}
-          name: spacer_7
-          properties: {height: 32}
-          type: Spacer
-        - layout_properties: {}
-          name: github_link
-          properties: {align: right, bold: false, font: Verdana, font_size: 30, foreground: '#0288d1', icon: 'fa:github', icon_align: right, url: 'https://github.com'}
-          type: Link
-        layout_properties: {grid_position: 'AYBNID,AGGBVP'}
+        layout_properties: {grid_position: 'WGYREY,ZGNBGA'}
         name: flow_panel_5
-        properties: {align: left}
+        properties: {align: center}
         type: FlowPanel
       layout_properties: {width: 337.0999755859375}
       name: column_panel_2
