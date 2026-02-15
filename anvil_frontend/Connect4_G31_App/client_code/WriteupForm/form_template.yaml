@@ -1,40 +1,459 @@
 components:
-- layout_properties: {grid_position: 'YDBCGB,ZEIBUC'}
-  name: label_3
+- components:
+  - components:
+    - layout_properties: {}
+      name: label_49
+      properties:
+        align: center
+        background: ''
+        bold: true
+        font: Agency FB
+        font_size: 50
+        foreground: '#1a237e'
+        role: null
+        text: |
+          Connect4: Neural Networks in Action
+      type: Label
+    - layout_properties: {}
+      name: spacer_1
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {}
+      name: spacer_4
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {}
+      name: spacer_5
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {}
+      name: spacer_6
+      properties: {height: 32}
+      type: Spacer
+    - components:
+      - event_bindings: {}
+        layout_properties: {}
+        name: back_button
+        properties: {background: '#f5fcff', bold: true, font: Verdana, font_size: 14, foreground: '#0288d1', role: outlined-button, text: Dashboard}
+        type: Button
+      - event_bindings: {}
+        layout_properties: {}
+        name: logout_button
+        properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: outlined-button, text: Logout}
+        type: Button
+      layout_properties: {}
+      name: flow_panel_11
+      properties: {align: center}
+      type: FlowPanel
+    layout_properties: {}
+    name: flow_panel_9
+    properties: {}
+    type: FlowPanel
+  layout_properties: {grid_position: 'EMGSBJ,VGUSLH'}
+  name: flow_panel_8
+  properties: {align: left}
+  type: FlowPanel
+- data_bindings: []
+  layout_properties: {grid_position: 'AYXUVQ,UVVCCN'}
+  name: group_member_names_label
   properties:
     align: center
-    background: ''
-    bold: true
-    font: Agency FB
-    font_size: 65
-    foreground: '#1a237e'
-    role: null
-    text: |
-      A Write-up of the Project - Connect4
+    background: '#26358C'
+    border: ''
+    font: Verdana
+    font_size: 14
+    foreground: '#ffffff'
+    icon: fa:group
+    italic: true
+    role: [input-prompt]
+    text: 'Group 31: Abhiroop Kumar, Frank Rong, Kristen Lowe, Lena Weissman'
   type: Label
 - components:
-  - layout_properties: {grid_position: 'HGZVRO,FLWSPV'}
-    name: report_text_1
-    properties: {border: '', content: REPORT PLACEHOLDER, font: Verdana, font_size: 16}
-    type: RichText
-  layout_properties: {grid_position: 'ODTDGI,BBLRND'}
-  name: report_panel
-  properties: {border: '0.5px solid #b0bec5'}
+  - components:
+    - layout_properties: {grid_position: 'FGORYT,MGMYKO'}
+      name: rich_text_1
+      properties:
+        content: |-
+          # **Project Overview**
+
+          Connect 4 is a deceptively simple two-player strategy game that presents a rich combinatorial search space and complex board-state dynamics. In this project, we explore how deep learning models can be trained to predict optimal moves given a board configuration and compete effectively against human players.
+
+          Our work focuses on designing and training two distinct neural network architectures \- a **Convolutional Neural Network (CNN)** and a **Transformer-based model**, to evaluate board states and recommend optimal moves. We analyze the training pipeline, architectural decisions, performance trade-offs, and classification challenges encountered during development.
+
+          Beyond model training, we extend this work into a fully functional system by integrating the trained models into a live gameplay environment using **Anvil (frontend), AWS (cloud infrastructure), and Docker (containerized backend services)**. This transforms the project from a standalone machine learning experiment into a production-style deployment of neural network agents.
+
+          The result is an end-to-end Connect 4 system that bridges neural network training, architectural experimentation, deployment engineering, and real-time inference demonstrating both machine learning rigor and applied systems integration.
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - layout_properties: {grid_position: 'HTCICJ,RUGSDA'}
+      name: rich_text_2
+      properties:
+        background: '#9dbac8'
+        border: '0.5px solid #b0bec5'
+        content: "## **Executive Summary**\n\nThis project investigates the development and deployment of deep neural networks to play Connect 4, focusing on both model performance and real-world integration.\n\n**Key highlights include:**\n\n* **Data Generation Pipeline:** Creation of labeled board states representing optimal moves to train supervised learning models.  \n* **CNN Architecture Design:** Leveraging spatial locality to capture board patterns such as threats, blocks, and winning alignments.  \n* **Transformer Architecture Design:** Applying attention mechanisms to model long-range dependencies and board-wide strategic interactions.  \n* **Model Evaluation:** Comparative analysis of strengths, weaknesses, and misclassification scenarios across architectures.  \n* **Deployment Engineering:** Integration of trained models into a live Connect 4 web application using Anvil, AWS, and Docker containers.  \n* **System Architecture Design:** Separation of CNN and Transformer inference services into independent containerized backends for modularity and scalability.\n\nThrough this project, we demonstrate how neural networks can learn structured strategic reasoning from board representations and how machine learning systems can transition from research prototypes to deployable interactive applications."
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - layout_properties: {grid_position: 'BEEYZG,JBGSZC'}
+      name: rich_text_30
+      properties:
+        content: |
+          ## **Table of Contents**
+
+          1. **Connect 4: Neural Networks in Action**
+              * Project Overview
+              * Executive Summary
+          2. **Neural Network Design and Training for Connect 4**
+              * Data Generation
+              * Convolutional Neural Network (CNN)
+              * Transformer
+              * Comparative Summary and Model Behaviour Analysis
+          3. **A Live Connect4 System: Deployment, Integration, and Engineering**
+              * System Architecture Overview
+              * Engineering the Frontend
+              * Deploying to AWS Lightsail
+              * Dockerization
+              * CNN Deployment
+              * Transformer Deployment
+              * Logging and Real-Time Inference Monitoring
+              * Bringing it All Together
+              * Reflection: Beyond Training
+          4. **Conclusion**
+        font: Verdana
+        font_size: 16
+      type: RichText
+    layout_properties: {grid_position: 'DDPMWN,JHKMUI'}
+    name: title_panel
+    properties: {}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'GVESAQ,CWXDFV'}
+    name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+  - components:
+    - layout_properties: {grid_position: 'PJAKTD,WZAZXJ'}
+      name: rich_text_3
+      properties:
+        content: |-
+          # **Neural Network Design and Training for Connect 4**
+
+          In this section, we detail the end-to-end process of designing, training, and evaluating neural networks capable of playing Connect 4\. Our objective was not only to achieve strong predictive performance, but to understand how different architectural choices influence strategic behavior on the board. We explore the data generation process, the design and training of a Convolutional Neural Network (CNN), and the development of a Transformer-based model, analyzing what worked well, what presented challenges, and how each model ultimately learned to interpret and act upon complex game states.
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - layout_properties: {grid_position: 'HBEMUJ,TBLCTT'}
+      name: rich_text_4
+      properties:
+        content: "## **Data Generation**\n\n### **MCTS Configuration**\n\nWe used Monte Carlo Tree Search with a skill level of 1500 simulations per move, balancing computational efficiency with move quality. At this skill level, MCTS provides strong strategic play while maintaining reasonable generation speed (\\~2-5 seconds per move).\n\n### **Game Generation Process**\n\nData was collected through MCTS self-play where both players used the same MCTS algorithm:\n\n* **Random Opening Moves:** To increase dataset diversity, each game began with 0-3 random moves.. These opening moves were not recorded in the training data, serving only to create varied starting positions.  \n* **MCTS Self-Play:** After the random opening, MCTS selected moves for both players. Only these MCTS-recommended moves were recorded as training examples.  \n* **Game Termination:** Games ended when a player achieved four-in-a-row. No positions from completed games were added to the dataset after a win was detected.\n\n### **Board Representation**\n\nWe used 6×7×2 one-hot encoding rather than the simpler ±1/0 format:\n\n* Channel 0: Positions occupied by \\+1 player (binary: 1 or 0\\)  \n* Channel 1: Positions occupied by \\-1 player (binary: 1 or 0\\)  \n* Empty positions: Both channels \\= 0\n\nThis representation provides clearer signals for neural networks to learn spatial patterns.\n\n### **Perspective Normalization**\n\nA critical preprocessing step was normalizing all board positions to the \\+1 player's perspective. When the \\-1 player made a move, we:\n\n* Flipped the board representation (swapped channels 0 and 1\\)  \n* Recorded the move from the \\+1 perspective\n\nThis ensures the neural network only needs to learn strategy for one player rather than maintaining separate representations for both perspectives.\n\n### **Initial Generation**\n\nWe generated data in batches to work within Google Colab's session limits. We played \\~7,000 games generating 222,539 board-move pairs before deduplication.\n\n#### **Data Augmentation**\n\nTo maximize dataset size and enforce symmetry, we applied horizontal mirroring:\n\n* Each board position was flipped left-to-right  \n* Corresponding moves were mirrored (column 0↔6, 1↔5, 2↔4, 3→3)  \n* This doubled our effective dataset size\n\nThe mirroring is valid because Connect 4 is symmetric, so a strong move in column 2 is equally strong in column 4 when the board is mirrored.\n\n#### **Duplicate Handling**\n\nMCTS's inherent randomness means the same board position can appear multiple times with different recommended moves. We discovered that:\n\n* 28.2% of positions were duplicates (same board, possibly different moves)  \n* 49.1% of these duplicates had conflicting move recommendations\n\nRather than just keeping the first occurrence, we used majority voting. This means that for each unique board position appearing multiple times, we count the frequency of each recommended move and keep the board with the most frequently recommended move. This approach is more reliable than random selection.\n\n### **Final Dataset Statistics**\n\nAfter deduplication with majority voting, we gathered 215,309 unique positions with no redundancy and each position has the consensus \"best\" move.\n\n#### **Move Distribution**\n\n* Perfectly symmetric after mirroring (Col 0≈Col 6, Col 1≈Col 5, etc.)  \n* Center column (3): 10.5% \\- slightly less preferred than edges  \n* Edge columns (0,6): 17.1% each \\- MCTS favors edge control  \n* Balanced distribution (10-17% range) indicates diverse positions\n\n#### **Board Encoding Quality**\n\n* Format: (215309, 6, 7, 2\\) numpy array  \n* Data type: float32 for memory efficiency  \n* Values: Only 0s and 1s (one-hot encoding)  \n* Moves: Integer range 0-6\n\n#### **Game Characteristics**\n\n* Average \\~30 recorded positions per game  \n* Games ranged from early victories with \\~10 moves to near-full boards with \\~40 moves\n\nThis dataset captures Connect 4 positions from opening moves through endgame tactics, providing the supervised learning foundation for both CNN and Transformer architectures.  \n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_1
+        properties: {display_mode: fill_width, source: _/theme/CNN_v1_basic_history.png}
+        type: Image
+      layout_properties: {grid_position: 'ASITZY,WUAUWW'}
+      name: rich_text_5
+      properties:
+        content: "## **Convolutional Neural Network (CNN)**\n\nIn building the convolutional neural network, we tested three architectures to find what works best:\n\n### **CNN\\_v1\\_basic (Baseline)**\n\n* 4 convolutional layers (64→128→128→256 filters)  \n* 2 dense layers (256→128)  \n* 1.7M parameters\n\nThis architecture resulted in 58.4% test accuracy, but faced issues with overfitting, with 92% train vs 59% val accuracy.  \n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_2
+        properties: {display_mode: fill_width, source: _/theme/CNN_v2_deep_history.png}
+        type: Image
+      layout_properties: {grid_position: 'HMWMJM,KHOSDK'}
+      name: rich_text_6
+      properties:
+        content: "### **CNN\\_v2\\_deep (Final Model)**\n\n* 6 convolutional layers (128→128→256→256→512→512 filters)  \n* 2 dense layers (512→256)  \n* L2 regularization on all conv layers  \n* Dropout (20-50%) after dense layers  \n* 13.4M parameters\n\nThis architecture resulted in 64.1% test accuracy. It had much better generalization than the first model, with only a 4% gap between train and validation accuracy.  \n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_3
+        properties: {display_mode: fill_width, source: _/theme/CNN_v3_multikernel_history.png}
+        type: Image
+      - layout_properties: {}
+        name: rich_text_29
+        properties: {content: 'Given these results, we decided to go with CNN\_v2\_deep as our CNN of choice. The deeper architecture was able to capture more complex patterns, with the progressive filter growth learning hierarchical features well. The heavy regularization prevented overfitting, with the much closer train/val performance showing true learning.', font: Verdana, font_size: 16}
+        type: RichText
+      layout_properties: {grid_position: 'JFQUCW,KMRIKZ'}
+      name: rich_text_7
+      properties:
+        content: "### **CNN\\_v3\\_multikernel (Experimental)**\n\n* Multiple kernel sizes (3×3, 5×5, 7×7) to capture patterns at different scales  \n* Concatenates outputs from different kernel sizes  \n* Similar depth to CNN\\_v2\n\nThis architecture resulted in 62.1% test accuracy, slightly lower than the second model. It faced issues with overfitting, though not as much as the first model. This showed us that multiple scales don't help much on small 6×7 boards; 3×3 filters are sufficient.  \n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - layout_properties: {grid_position: 'XLSVZF,OXLNEO'}
+      name: rich_text_8
+      properties:
+        content: "### **CNN Results**\n\nTest Performance:\n\n* Accuracy: 64.1% (CNN agrees with MCTS 64% of the time)  \n* Confidence on correct predictions: 76%  \n* Confidence on incorrect predictions: 50%"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_4
+        properties: {display_mode: fill_width, source: _/theme/cnn_high_confidence_correct_final.png}
+        type: Image
+      layout_properties: {grid_position: 'UNLZRL,NUKVZY'}
+      name: rich_text_9
+      properties:
+        content: |+
+          ### **What the CNN Learned**
+
+          #### **Easy Boards (High Confidence, Correct)**
+
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_5
+        properties: {display_mode: fill_width, source: _/theme/cnn_low_confidence_correct_final.png}
+        type: Image
+      layout_properties: {grid_position: 'UZHMUW,NZJHTS'}
+      name: rich_text_10
+      properties:
+        content: "The CNN confidently (\\>80%) handles:\n\n* Immediate threats: Three in a row that must be blocked  \n* Winning moves: Three in a row that need completion  \n* Opening moves: Center control in early game\n\nThese are pattern-matching tasks where CNNs excel.\n\n#### **Difficult Boards (Low Confidence, Correct)**\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_6
+        properties: {display_mode: fill_width, source: _/theme/cnn_high_confidence_incorrect_final.png}
+        type: Image
+      layout_properties: {grid_position: 'KQKKGI,DPQHWI'}
+      name: rich_text_11
+      properties:
+        content: "The CNN struggles with (\\<35% confidence):\n\n* Complex mid-game positions: 12-20 pieces, no immediate threats  \n* Multiple good options: Where several moves are similarly valid  \n* Strategic setup moves: Requires multi-move planning, not just pattern matching\n\nLow confidence often means the position genuinely has multiple reasonable moves.\n\n#### **Mistakes (High Confidence, Incorrect)**\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_7
+        properties: {display_mode: fill_width, source: _/theme/cnn_close_calls_final.png}
+        type: Image
+      layout_properties: {grid_position: 'EOSOKQ,CDGQSF'}
+      name: rich_text_12
+      properties:
+        content: "The CNN makes confident mistakes on:\n\n* Fork opportunities: Misses subtle setups that create two ways to win  \n* Multi-front threats: Focuses on one threat while missing a bigger one elsewhere  \n* Late-game positions: Requires calculation over pattern recognition\n\nThese errors reveal CNN's limitation: it's great at \"what's on the board now\" but struggles with \"what could happen in 3-4 moves.\"\n\n#### **Close Calls**\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - layout_properties: {grid_position: 'TQMXZP,MFKFRL'}
+      name: rich_text_13
+      properties:
+        content: "Positions where the CNN's top two choices are within 15% probability. Often, both moves are actually good \\- this highlights that our accuracy metric (agreement with MCTS) isn't perfect. MCTS isn't always right, and sometimes multiple moves lead to similar outcomes.\n\nWhy Some Boards Are Hard for CNN\n\n1. Multi-move planning: CNN recognizes current patterns but can't search ahead 3-4 moves like MCTS  \n2. Multiple valid options: When several moves are equally good, disagreeing with MCTS doesn't mean the CNN is \"wrong\"  \n3. Limited training examples: 215K samples can't cover billions of possible positions; novel boards are harder  \n4. Spread-out patterns: Very dispersed threats across the board are harder to detect than compact local patterns\n\nAt 64% accuracy, the CNN learned genuine Connect 4 strategy such as threat recognition, blocking, center control, and winning patterns. Its mistakes are instructive, showing the boundary between pattern matching (where it excels) and multi-move planning (where search algorithms dominate).\n\nThe architectural exploration validated that depth and regularization matter. CNN\\_v2\\_deep's superior performance over the baseline (64% vs 58%) came from going deeper while preventing overfitting through L2 regularization and dropout. The multi-kernel experiment (CNN\\_v3) showed that on small grids like Connect 4, simple 3×3 filters are sufficient and larger receptive fields don't add value.  "
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_8
+        properties: {display_mode: fill_width, source: _/theme/connect4_transformer_history.png}
+        type: Image
+      layout_properties: {grid_position: 'HMZZOZ,CWJWHU'}
+      name: rich_text_14
+      properties:
+        content: "## **Transformer**\n\nFor the transformer, we decided to divide the board into overlapping six 3x3x2 subimages and use additive positional encoding. Next, to find the optimal hyperparameters, we ran a sweep using WandB to obtain the best architecture for training:\n\n* Number of Layers: 4  \n* Embedded dimensions: 128  \n* Heads: 4  \n* MLP dimensions: 128  \n* Dropout Rate: 0.15  \n* Learning Rate: 0.00045  \n* Batch Size: 256\n\n\n### **Transformer Results**\n\nPerformance:\n\n* Accuracy: 70% after training of the full dataset for 500 epochs  \n* Model agrees with MCTS 80% of the time  \n* Model has a win rate of 31% against MCTS with a step count of 500\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_9
+        properties: {display_mode: fill_width, source: _/theme/Transformer_high_confidence_correct_final.png}
+        type: Image
+      layout_properties: {grid_position: 'AGVGMG,OJULBH'}
+      name: rich_text_15
+      properties:
+        content: |+
+          ### **What the Transformer Learned**
+
+          #### **Easy Boards (High Confidence, Correct)**
+
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_10
+        properties: {display_mode: fill_width, source: _/theme/Transformer_low_confidence_correct_final.png}
+        type: Image
+      layout_properties: {grid_position: 'NXTLRD,MXNYHF'}
+      name: rich_text_16
+      properties:
+        content: "The Transformer handles several types of boards with certainty:\n\n* Immediate threats: Three in a row that must be blocked  \n* Winning moves: Three in a row that need completion  \n* Opening moves: Center control in early game\n\n#### **Difficult Boards (Low Confidence, Correct)**\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_11
+        properties: {display_mode: fill_width, source: _/theme/Transformer_high_confidence_incorrect_final.png}
+        type: Image
+      layout_properties: {grid_position: 'LPXRKM,AKJGIT'}
+      name: rich_text_17
+      properties:
+        content: "The Transformer struggles with and is less certain when dealing with:\n\n* Post opening moves: Transformer could take multiple possible good moves  \n* Midgame strategies: Transformer lacks direction and forward planning  \n* Strategic setup moves: Requires multi-move planning, not just pattern matching\n\n#### **Mistakes (High Confidence, Incorrect)**\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_12
+        properties: {display_mode: fill_width, source: _/theme/Transformer_close_calls_final.png}
+        type: Image
+      layout_properties: {grid_position: 'ZEHYZC,DMYWLQ'}
+      name: rich_text_18
+      properties:
+        content: "The Transformer is confidently incorrect when:\n\n* Throwaway moves: Struggles dealing with making moves which don’t aid in the opponents win  \n* Multi-front threats: Misprioritizes the bigger threat for a smaller one\n\n#### **Close Calls**\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - layout_properties: {grid_position: 'XNKMGI,DXJQYV'}
+      name: rich_text_19
+      properties:
+        content: "Positions where the Transformers’ top two choices are within 15% probability. Often, both moves are actually good \\- this again highlights that our accuracy metric (agreement with MCTS) isn't perfect, additionally both the transformer and CNN both seem to struggle with earlier game moves as they lack direction and a direct win condition.  \n\n## **Comparative Summary and Model Behavior Analysis**\n\nWhile both architectures were trained on the same underlying game data, their learning dynamics and decision-making behaviors differed in meaningful ways.\n\nThe CNN architecture demonstrated strong performance in spatially obvious board states. Because convolutional filters specialize in detecting local spatial patterns, the model performed well in situations involving clear horizontal or vertical threats. Its inductive bias toward locality made it particularly effective at recognizing immediate win or block configurations.\n\nThe Transformer model, by contrast, exhibited stronger long-range reasoning behavior. Self-attention allowed it to evaluate relationships across the entire board simultaneously, enabling it to identify multi-step tactical threats more effectively in complex mid-game positions. However, this increased flexibility also introduced sensitivity to training distribution and positional encoding design.\n\nIn simpler board states, both models performed comparably. In highly ambiguous or multi-threat configurations, misclassifications were often linked to:\n\n* Sparse representation of similar board states in training data  \n* Conflicting reward signals during training  \n* Ambiguity between defensive and offensive priorities\n\nOverall, the CNN provided stable, computationally efficient performance with strong local pattern recognition, while the Transformer demonstrated higher strategic depth at the cost of increased architectural complexity and deployment considerations.  "
+        font: Verdana
+        font_size: 16
+      type: RichText
+    layout_properties: {grid_position: 'GYQDDU,SOWISV'}
+    name: neural_net_panel
+    properties: {}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'PMHLFV,GFOPCA'}
+    name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+  - components:
+    - components:
+      - layout_properties: {}
+        name: image_13
+        properties: {display_mode: fill_width, source: _/theme/System Architecture Diagram.png}
+        type: Image
+      layout_properties: {grid_position: 'JWEXLC,MFIQQJ'}
+      name: rich_text_20
+      properties:
+        content: "# **A Live Connect 4 System: Deployment, Integration, and Engineering**\n\nTraining a neural network to play Connect 4 is one challenge. Turning that network into a live, interactive system that people can actually play against is another.\n\nAfter finalizing the CNN and Transformer architectures described above, the next step was to operationalize them. This required building a production-style pipeline that could host both models, handle inference in real time, and integrate seamlessly with a frontend interface. What followed was a multi-stage engineering effort involving Anvil, AWS Lightsail, Docker, and extensive debugging to ensure cross-version compatibility.\n\nThis section documents how we transformed trained models into a working ML application.  \n\n## **System Architecture**\n\nAt a high level, the deployed system consists of four components:\n\n* **Anvil** \\- Frontend UI and application logic  \n* **Anvil Uplink** \\- Secure communication channel  \n* **AWS Lightsail (Ubuntu)** \\- Cloud compute host  \n* **Docker Containers** \\- Isolated model-serving environments\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_14
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/Final PlayForm UI.jpeg}
+        type: Image
+      layout_properties: {grid_position: 'HOLSMP,XNOWEY'}
+      name: rich_text_21
+      properties:
+        content: "Instead of running inference locally, each move request is routed through Anvil’s Uplink to a Docker container hosted on AWS. The container loads the model into memory and returns the predicted move. This separation keeps the frontend lightweight and ensures reproducibility of the model environment.\n\nWe deployed two separate inference containers:\n\n* **CNN Container (Hard difficulty)**  \n* **Transformer Container (Medium difficulty)**\n\nAdditionally, a simple heuristic bot was retained for **Easy difficulty**, providing a baseline comparison.  \n\n## **Engineering the Frontend**\n\nThe Anvil frontend was built to reflect the game mechanics clearly while maintaining strict separation between UI logic and backend inference.\n\n### **UI Decisions**\n\nThe grid is rendered dynamically as a 6×7 board. Users do not click grid cells directly; instead, they click numbered column buttons (0-6). This design choice prevents ambiguity in move interpretation and ensures clean mapping to backend logic.\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_15
+        properties: {source: _/theme/AWS Lightsail Instance Overview.png}
+        type: Image
+      layout_properties: {grid_position: 'ADLKTV,YPKEJQ'}
+      name: rich_text_22
+      properties:
+        content: "Game statistics are tracked separately for each difficulty level. This allows direct experiential comparison between the CNN and Transformer models.\n\nTo improve usability:\n\n* The UI locks during inference to prevent double moves.  \n* A brief “Bot thinking…” delay is shown for realism.  \n* End-of-game popups summarize results and updated statistics.  \n* Mobile users are restricted (the interface is optimized for desktop play).\n\nThese choices ensure that the user experience supports evaluation of the neural networks rather than distracting from them.  \n\n## **Deploying to AWS Lightsail**\n\nWe chose **AWS Lightsail** for its simplicity and persistent compute capabilities. A lightweight Ubuntu instance was provisioned, Docker installed, and firewall rules configured.\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_16
+        properties: {display_mode: fill_width, source: _/theme/Project Directory Structure.png}
+        type: Image
+      layout_properties: {grid_position: 'PSLGMV,YVJXDY'}
+      name: rich_text_23
+      properties:
+        content: "Since no GPU was available, all inference runs on CPU. TensorFlow emitted CUDA-related warnings, but these were expected and harmless in a CPU-only environment.\n\nMemory usage during CNN loading required monitoring, particularly because the CNN architecture is relatively parameter-heavy. However, after optimization, both models load reliably at container startup.  \n\n## **Dockerization**\n\nOne major design decision was to separate the CNN and Transformer into different Docker containers rather than combining them.\n\nWe created:\n\n* `Dockerfile` → CNN container  \n* `Dockerfile.tx` → Transformer container  \n* `uplink_server.py` → CNN inference endpoint  \n* `tx_uplink_server.py` → Transformer inference endpoint\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_17
+        properties: {display_mode: fill_width, source: _/theme/Docker Logs Showing CNN Successfully Loaded.png}
+        type: Image
+      layout_properties: {grid_position: 'DQCIXC,LPRXXM'}
+      name: rich_text_24
+      properties:
+        content: "This separation proved crucial. The two models had different serialization formats, dependency sensitivities, and loading requirements. Keeping them isolated simplified debugging and prevented cross-contamination of environments.  \n\n## **CNN Deployment**\n\nThe CNN model was saved in `.h5` format under a different TensorFlow/Keras version than the deployment environment. This resulted in several errors during deserialization, including:\n\n* `batch_shape` argument mismatches  \n* `dtype` policy issues  \n* incompatibility with newer Keras versions\n\nTo resolve this, we:\n\n* Loaded the model with `compile=False`  \n* Adjusted compatibility layers  \n* Ensured consistent TensorFlow versions in Docker\n\nOnce patched, the CNN loaded successfully and performed inference consistently.\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_18
+        properties: {display_mode: fill_width, source: _/theme/Transformer SavedModel Load Logs.png}
+        type: Image
+      layout_properties: {grid_position: 'TDKHHD,HXLZED'}
+      name: rich_text_25
+      properties:
+        content: "This experience highlighted how tightly coupled `.h5` models can be to their training environment.  \n\n## **Transformer Deployment**\n\nThe Transformer model posed a more complex challenge.\n\nThe original `.keras` model file failed to load due to:\n\n* Unknown custom layers  \n* `dtype` policy errors  \n* Cross-version serialization incompatibilities  \n* Keras 3 vs TensorFlow 2.x conflicts\n\nRather than attempting to manually register and patch every incompatibility, we returned to the original training environment (Google Colab) and re-exported the model using TensorFlow’s SavedModel format:\n\n`tf.saved_model.save(model, \"tx_savedmodel\")`\n\nThe SavedModel directory structure proved far more robust across environments.\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - components:
+      - layout_properties: {}
+        name: image_19
+        properties: {display_mode: fill_width, source: _/theme/Docker Logs Showing Turn-by-Turn Moves.png}
+        type: Image
+      layout_properties: {grid_position: 'RVFBVO,MPJUVD'}
+      name: rich_text_26
+      properties:
+        content: "This eliminated the need for custom object registration and resolved version conflicts cleanly.\n\nThe key lesson: **SavedModel is significantly more portable than `.keras` for cross-environment deployment.**  \n\n## **Logging and Real-Time Inference Monitoring**\n\nTo validate inference correctness, we implemented turn-by-turn logging in both containers:\n\n* `Human played [column]`  \n* `Transformer/CNN Bot played [column]`\n\n"
+        font: Verdana
+        font_size: 16
+      type: RichText
+    - layout_properties: {grid_position: 'CQUCBS,LUGHFS'}
+      name: rich_text_27
+      properties:
+        content: "This allowed us to:\n\n* Debug invalid move cases  \n* Confirm legal move masking  \n* Observe difficulty differences between models\n\nThe Transformer displayed more balanced positional play, while the CNN exhibited stronger defensive blocking patterns \\- consistent with our training observations.  \n\n## **Bringing It All Together**\n\nWhen a user plays a move:\n\n1. The frontend validates the column.  \n2. The board state is updated locally.  \n3. The UI locks.  \n4. The board is sent to the AWS container.  \n5. The selected model predicts the best legal move.  \n6. The move is returned and rendered.  \n7. Stats update and results display if the game ends.\n\nThe final system integrates neural network inference with UI responsiveness and cloud-hosted reliability.  \n\n## **Reflection: Beyond Training**\n\nThe earlier sections of this report focus on architecture design, hyperparameter tuning, and model performance. This deployment phase revealed a different layer of machine learning engineering:\n\n* Serialization format matters.  \n* Version consistency matters.  \n* Docker isolation simplifies reproducibility.  \n* SavedModel is the one of the safest export strategies for Transformers.  \n* UI decisions affect inference behavior.\n\nUltimately, this project evolved from training neural networks to building a complete ML-powered application.\n\nThe CNN and Transformer are no longer just trained models \\- they are interactive agents capable of playing Connect 4 in real time within a production-style environment.  "
+        font: Verdana
+        font_size: 16
+      type: RichText
+    layout_properties: {grid_position: 'PFGXTX,VFVVXG'}
+    name: integration_deployment_panel
+    properties: {}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'CLTRYC,UJPRTT'}
+    name: spacer_18
+    properties: {height: 32}
+    type: Spacer
+  - components:
+    - layout_properties: {grid_position: 'WECYEY,MCLOQZ'}
+      name: rich_text_28
+      properties:
+        content: "# **Conclusion**\n\nThis project began with a simple goal: train neural networks to play Connect 4\\. Through experimentation, we developed both a CNN that captures local board patterns and a Transformer that reasons more globally about game state.\n\nBut the real impact came from turning those models into a live system. By integrating them into a web application and deploying them in a production-style environment, we moved beyond training into real-world machine learning engineering.\n\nIn the end, this project was not just about model performance \\- it was about building an interactive, end-to-end ML-powered experience.  "
+        font: Verdana
+        font_size: 16
+      type: RichText
+    layout_properties: {grid_position: 'NRQYRG,UZYHZA'}
+    name: conclusion_panel
+    properties: {}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'GFSDBH,XYQQXX'}
+    name: spacer_19
+    properties: {height: 32}
+    type: Spacer
+  layout_properties: {grid_position: 'IWWQOH,TVWOVK'}
+  name: content_panel
+  properties: {background: '#c1dcf0', border: '0.5px solid #b0bec5'}
   type: ColumnPanel
-- components:
-  - layout_properties: {}
-    name: back_button
-    properties: {background: '#f5fcff', bold: true, font: Verdana, font_size: 14, foreground: '#0288d1', role: outlined-button, text: Back to Dashboard}
-    type: Button
-  - event_bindings: {}
-    layout_properties: {}
-    name: logout_button
-    properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: outlined-button, text: Logout}
-    type: Button
-  layout_properties: {grid_position: 'QBXTEN,JFWOEN'}
-  name: flow_panel_1
-  properties: {align: center}
-  type: FlowPanel
 container:
   properties: {background: '#E1F5FE'}
   type: ColumnPanel

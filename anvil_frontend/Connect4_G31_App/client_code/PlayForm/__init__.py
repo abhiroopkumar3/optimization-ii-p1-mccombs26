@@ -1,6 +1,8 @@
 from ._anvil_designer import PlayFormTemplate
 from anvil import *
 import anvil.server
+import anvil.js
+from anvil.js.window import navigator
 import random
 import time
 
@@ -10,6 +12,21 @@ class PlayForm(PlayFormTemplate):
 
   def __init__(self, **properties):
     self.init_components(**properties)
+
+    # --- Block mobile devices ---
+    ua = (navigator.userAgent or "").lower()
+    is_mobile = any(k in ua for k in ["android", "iphone", "ipad", "ipod", "mobile"])
+
+    if is_mobile:
+      alert(
+        "This game is not optimized for mobile devices.\n"
+        "Please use a laptop/desktop for the best experience.",
+        title="Unsupported Device",
+        buttons=[("OK", True)]
+      )
+      time.sleep(0.5)
+      open_form("LoginForm")   # force logout / send to login
+      return
 
     # --- Stats per difficulty ---
     self.stats = {
