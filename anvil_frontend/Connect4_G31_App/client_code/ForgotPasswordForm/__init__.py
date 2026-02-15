@@ -5,6 +5,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import time
+import re
+
 
 class ForgotPasswordForm(ForgotPasswordFormTemplate):
   def __init__(self, **properties):
@@ -21,6 +23,10 @@ class ForgotPasswordForm(ForgotPasswordFormTemplate):
     self.user_box.enabled = True
 
   # ---------------- helpers ----------------
+
+  # Password criteria
+  PASSWORD_REGEX = r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,15}$'
+
 
   def _reset_ui(self):
     """Return UI to initial state."""
@@ -55,24 +61,24 @@ class ForgotPasswordForm(ForgotPasswordFormTemplate):
   @handle("retrieve_button", "click")
   def retrieve_button_click(self, **event_args):
     email = (self.user_box.text or "").strip().lower()
-  
+
     if not email:
       alert("Enter your email first.")
       return
-  
+
     try:
       resp = anvil.server.call("fp_get_security_question", email)
     except Exception as e:
       alert(str(e))
       return
-  
+
     # Server returns: {"ok": True, "question": "..."}
     question = resp.get("question")
-  
+
     self.security_question_label.text = question
     self.security_panel.visible = True
     self.reset_panel.visible = False
-  
+
     self.user_box.enabled = False
     self.change_user_button.visible = True
 
@@ -80,25 +86,25 @@ class ForgotPasswordForm(ForgotPasswordFormTemplate):
   def submit_button_click(self, **event_args):
     email = (self.user_box.text or "").strip().lower()
     ans = (self.answer_box.text or "").strip()
-  
+
     if not ans:
       alert("Please enter your answer.")
       return
-  
+
     try:
       ok = anvil.server.call("fp_check_security_answer", email, ans)
     except Exception as e:
       alert(str(e))
       return
-  
+
     if not ok:
       alert("Incorrect answer. Please try again.")
       return
-  
+
     # Answer correct → swap panels
     self.security_panel.visible = False
     self.reset_panel.visible = True
-  
+
     alert(
       "Correct answer! Please set a new password.",
       title="Verified",
@@ -110,28 +116,45 @@ class ForgotPasswordForm(ForgotPasswordFormTemplate):
     email = (self.user_box.text or "").strip().lower()
     new_pw = (self.new_password_box.text or "")
     confirm_pw = (self.confirm_password_box.text or "")
-  
+
     # 1️⃣ Empty validation
     if not new_pw or not confirm_pw:
       alert("Please fill in both password fields.")
       return
-  
+
     # 2️⃣ Match validation
     if new_pw != confirm_pw:
-      alert("Passwords do not match. Please try again.")
+      alert("Passwords do not match.")
       return
-  
+
+    # 3️⃣ Combined password validation
+    if not re.match(self.PASSWORD_REGEX, new_pw):
+      alert(
+        "Password must:\n"
+        "• Be 8–15 characters long\n"
+        "• Include at least one uppercase letter\n"
+        "• Include at least one lowercase letter\n"
+        "• Include at least one number\n"
+        "• Include at least one special character"
+      )
+      return
+
+    # Server-side validation + write
     try:
-      ok = anvil.server.call("fp_reset_password", email, new_pw)
+      resp = anvil.server.call("fp_reset_password", email, new_pw)
     except Exception as e:
       alert(str(e))
       return
-  
+
+    # If your server returns {"ok": True}, handle both dict/bool safely
+    ok = resp.get("ok") if isinstance(resp, dict) else bool(resp)
+
     if ok:
       alert("Password updated successfully!", title="Success")
       open_form("LoginForm")
     else:
       alert("Could not update password.")
+
 
   @handle("change_user_button", "click")
   def change_user_button_click(self, **event_args):
@@ -139,7 +162,7 @@ class ForgotPasswordForm(ForgotPasswordFormTemplate):
     self.user_box.text = ""
     self.answer_box.text = ""
     self.new_password_box.text = ""
-  
+
     self.security_panel.visible = False
     self.reset_panel.visible = False
     self.change_user_button.visible = False
@@ -154,10 +177,9 @@ class ForgotPasswordForm(ForgotPasswordFormTemplate):
   def info_icon_button_click(self, **event_args):
     text = (
       "• Enter the registered username\n"
-      "• Click 'Retrieve Password' to view your security question\n"
+      "• Click 'Reset Password' to view your security question\n"
       "• Answer the question correctly to reset your password\n"
-      "• Your new password must be at least 6 characters\n"
-      "• You cannot reuse any of your last 3 passwords\n\n"
+      "• Your new password must be match the required criteria\n\n"
       "Try dummy user 'resetpwd' to test this functionality\n"
     )
     Notification(text, title="Forgot Password Help", style="info", timeout=0).show()
@@ -166,7 +188,11 @@ class ForgotPasswordForm(ForgotPasswordFormTemplate):
   def pwd_criteria_icon_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     text = (
-      "• Your new password must be at least 6 characters\n"
+      "• Your new password must be 8-15 characters\n"
+      "• Your new password must have at least one uppercase letter\n"
+      "• Your new password must have at least one lowercase letter\n"
+      "• Your new password must have at least one number\n"
+      "• Your new password must have at least one special character\n"
       "• You cannot reuse any of your last 3 passwords\n"
       "• After successfully reseting your password, login again with your new password\n"
     )
