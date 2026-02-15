@@ -97,7 +97,7 @@ components:
     type: RichText
   - layout_properties: {grid_position: 'FVVQJL,HYAMCA'}
     name: choose_difficulty
-    properties: {display_mode: zoom_to_fill, source: _/theme/04 - Choose Your Difficulty.png}
+    properties: {border: '0.5px solid #b0bec5', display_mode: zoom_to_fill, source: _/theme/04 - Choose Your Difficulty.png}
     type: Image
   - layout_properties: {grid_position: 'SFNSTM,BVIBQV'}
     name: instructions_text_6
@@ -114,14 +114,19 @@ components:
       font: Verdana
       font_size: 16
     type: RichText
-  - layout_properties: {grid_position: 'WEDIBL,NSSPUO'}
-    name: game_results
-    properties: {display_mode: shrink_to_fit, source: _/theme/05a - Game Results.png, visible: true}
-    type: Image
-  - layout_properties: {grid_position: 'WEDIBL,DLZTVH'}
-    name: game_statistics
-    properties: {display_mode: zoom_to_fill, source: _/theme/05b - Game Statistics.png}
-    type: Image
+  - components:
+    - layout_properties: {width: 180.54998779296875}
+      name: game_results
+      properties: {display_mode: shrink_to_fit, source: _/theme/05a - Game Results.png, visible: true}
+      type: Image
+    - layout_properties: {width: 377.3869267578125}
+      name: game_statistics
+      properties: {display_mode: zoom_to_fill, source: _/theme/05b - Game Statistics.png}
+      type: Image
+    layout_properties: {grid_position: 'EQNMMK,FAFNPS'}
+    name: flow_panel_2
+    properties: {align: center, border: '0.5px solid #b0bec5'}
+    type: FlowPanel
   - layout_properties: {grid_position: 'BOQKST,UZVYAD'}
     name: instructions_text_7
     properties:
@@ -137,7 +142,7 @@ components:
     type: RichText
   - layout_properties: {grid_position: 'LBYRVN,WZMYPL'}
     name: ending_restarting
-    properties: {display_mode: fill_width, height: 120.60000610351562, source: _/theme/06 - Ending or Restarting.png}
+    properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, height: 120.60000610351562, source: _/theme/06 - Ending or Restarting.png}
     type: Image
   - layout_properties: {grid_position: 'BMJUGE,JBKCOV'}
     name: instructions_text_8

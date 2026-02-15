@@ -152,7 +152,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_1
-        properties: {display_mode: fill_width, source: _/theme/CNN_v1_basic_history.png}
+        properties: {border_radius: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/CNN_v1_basic_history.png}
         type: Image
       layout_properties: {grid_position: 'ASITZY,WUAUWW'}
       name: rich_text_5
@@ -164,7 +164,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_2
-        properties: {display_mode: fill_width, source: _/theme/CNN_v2_deep_history.png}
+        properties: {border_radius: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/CNN_v2_deep_history.png}
         type: Image
       layout_properties: {grid_position: 'HMWMJM,KHOSDK'}
       name: rich_text_6
@@ -176,7 +176,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_3
-        properties: {display_mode: fill_width, source: _/theme/CNN_v3_multikernel_history.png}
+        properties: {border_radius: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/CNN_v3_multikernel_history.png}
         type: Image
       - layout_properties: {}
         name: rich_text_29
@@ -199,7 +199,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_4
-        properties: {display_mode: fill_width, source: _/theme/cnn_high_confidence_correct_final.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/cnn_high_confidence_correct_final.png}
         type: Image
       layout_properties: {grid_position: 'UNLZRL,NUKVZY'}
       name: rich_text_9
@@ -215,7 +215,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_5
-        properties: {display_mode: fill_width, source: _/theme/cnn_low_confidence_correct_final.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/cnn_low_confidence_correct_final.png}
         type: Image
       layout_properties: {grid_position: 'UZHMUW,NZJHTS'}
       name: rich_text_10
@@ -227,7 +227,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_6
-        properties: {display_mode: fill_width, source: _/theme/cnn_high_confidence_incorrect_final.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/cnn_high_confidence_incorrect_final.png}
         type: Image
       layout_properties: {grid_position: 'KQKKGI,DPQHWI'}
       name: rich_text_11
@@ -239,7 +239,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_7
-        properties: {display_mode: fill_width, source: _/theme/cnn_close_calls_final.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/cnn_close_calls_final.png}
         type: Image
       layout_properties: {grid_position: 'EOSOKQ,CDGQSF'}
       name: rich_text_12
@@ -258,7 +258,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_8
-        properties: {display_mode: fill_width, source: _/theme/connect4_transformer_history.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/connect4_transformer_history.png}
         type: Image
       layout_properties: {grid_position: 'HMZZOZ,CWJWHU'}
       name: rich_text_14
@@ -270,7 +270,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_9
-        properties: {display_mode: fill_width, source: _/theme/Transformer_high_confidence_correct_final.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/Transformer_high_confidence_correct_final.png}
         type: Image
       layout_properties: {grid_position: 'AGVGMG,OJULBH'}
       name: rich_text_15
@@ -286,7 +286,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_10
-        properties: {display_mode: fill_width, source: _/theme/Transformer_low_confidence_correct_final.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/Transformer_low_confidence_correct_final.png}
         type: Image
       layout_properties: {grid_position: 'NXTLRD,MXNYHF'}
       name: rich_text_16
@@ -298,7 +298,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_11
-        properties: {display_mode: fill_width, source: _/theme/Transformer_high_confidence_incorrect_final.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/Transformer_high_confidence_incorrect_final.png}
         type: Image
       layout_properties: {grid_position: 'LPXRKM,AKJGIT'}
       name: rich_text_17
@@ -310,7 +310,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_12
-        properties: {display_mode: fill_width, source: _/theme/Transformer_close_calls_final.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/Transformer_close_calls_final.png}
         type: Image
       layout_properties: {grid_position: 'ZEHYZC,DMYWLQ'}
       name: rich_text_18
@@ -338,7 +338,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_13
-        properties: {display_mode: fill_width, source: _/theme/System Architecture Diagram.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/System Architecture Diagram.png}
         type: Image
       layout_properties: {grid_position: 'JWEXLC,MFIQQJ'}
       name: rich_text_20
@@ -362,7 +362,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_15
-        properties: {source: _/theme/AWS Lightsail Instance Overview.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/AWS Lightsail Instance Overview.png}
         type: Image
       layout_properties: {grid_position: 'ADLKTV,YPKEJQ'}
       name: rich_text_22
@@ -374,7 +374,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_16
-        properties: {display_mode: fill_width, source: _/theme/Project Directory Structure.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/Project Directory Structure.png}
         type: Image
       layout_properties: {grid_position: 'PSLGMV,YVJXDY'}
       name: rich_text_23
@@ -386,7 +386,7 @@ components:
     - components:
       - layout_properties: {}
         name: image_17
-        properties: {display_mode: fill_width, source: _/theme/Docker Logs Showing CNN Successfully Loaded.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/Docker Logs Showing CNN Successfully Loaded.png}
         type: Image
       layout_properties: {grid_position: 'DQCIXC,LPRXXM'}
       name: rich_text_24
@@ -398,19 +398,19 @@ components:
     - components:
       - layout_properties: {}
         name: image_18
-        properties: {display_mode: fill_width, source: _/theme/Transformer SavedModel Load Logs.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/Transformer SavedModel Load Logs.png}
         type: Image
       layout_properties: {grid_position: 'TDKHHD,HXLZED'}
       name: rich_text_25
       properties:
-        content: "This experience highlighted how tightly coupled `.h5` models can be to their training environment.  \n\n## **Transformer Deployment**\n\nThe Transformer model posed a more complex challenge.\n\nThe original `.keras` model file failed to load due to:\n\n* Unknown custom layers  \n* `dtype` policy errors  \n* Cross-version serialization incompatibilities  \n* Keras 3 vs TensorFlow 2.x conflicts\n\nRather than attempting to manually register and patch every incompatibility, we returned to the original training environment (Google Colab) and re-exported the model using TensorFlow’s SavedModel format:\n\n`tf.saved_model.save(model, \"tx_savedmodel\")`\n\nThe SavedModel directory structure proved far more robust across environments.\n\n"
+        content: "This experience highlighted how tightly coupled `.h5` models can be to their training environment.  \n\n## **Transformer Deployment**\n\nThe Transformer model posed a more complex challenge.\n\nThe original `.keras` model file failed to load due to:\n\n* Unknown custom layers  \n* `dtype` policy errors  \n* Cross-version serialization incompatibilities  \n* Keras 3 vs TensorFlow 2.x conflicts\n\nRather than attempting to manually register and patch every incompatibility, we returned to the original training environment (Google Colab) and re-exported the model using TensorFlow’s SavedModel format:\n```python\ntf.saved_model.save(model, \"tx_savedmodel\")\n```\n\nThe SavedModel directory structure proved far more robust across environments.\n\n"
         font: Verdana
         font_size: 16
       type: RichText
     - components:
       - layout_properties: {}
         name: image_19
-        properties: {display_mode: fill_width, source: _/theme/Docker Logs Showing Turn-by-Turn Moves.png}
+        properties: {border: '0.5px solid #b0bec5', display_mode: fill_width, source: _/theme/Docker Logs Showing Turn-by-Turn Moves.png}
         type: Image
       layout_properties: {grid_position: 'RVFBVO,MPJUVD'}
       name: rich_text_26
@@ -454,6 +454,21 @@ components:
   name: content_panel
   properties: {background: '#c1dcf0', border: '0.5px solid #b0bec5'}
   type: ColumnPanel
+- components:
+  - event_bindings: {}
+    layout_properties: {}
+    name: back_button_2
+    properties: {background: '#f5fcff', bold: true, font: Verdana, font_size: 14, foreground: '#0288d1', role: outlined-button, text: Dashboard}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: logout_button_2
+    properties: {background: '#0288d1', bold: true, font: Verdana, font_size: 14, foreground: '#ffffff', role: outlined-button, text: Logout}
+    type: Button
+  layout_properties: {grid_position: 'BIXZQK,TWKXAC'}
+  name: flow_panel_12
+  properties: {align: center}
+  type: FlowPanel
 container:
   properties: {background: '#E1F5FE'}
   type: ColumnPanel

@@ -25,3 +25,16 @@ class WriteupForm(WriteupFormTemplate):
     time.sleep(0.5)
     open_form("LoginForm")
     alert("You have successfully logged out!", title="Logout", buttons=[("OK", True)])
+
+  @handle("back_button_2", "click")
+  def back_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    time.sleep(0.5)
+    open_form("DashboardForm")
+
+  @handle("logout_button_2", "click")
+  def logout_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    time.sleep(0.5)
+    open_form("LoginForm")
+    alert("You have successfully logged out!", title="Logout", buttons=[("OK", True)])

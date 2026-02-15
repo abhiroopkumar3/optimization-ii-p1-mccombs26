@@ -20,7 +20,8 @@ COL_SEC_Q = "security_question"    # security question column (text)
 COL_SEC_A = "security_answer"      # security answer column (text)
 
 COL_HISTORY = "password_history"   # list of previous passwords (most recent first)
-PROTECTED_USER = "dan"             # cannot reset this user
+PROTECTED_USER_1 = "dan"             # cannot reset this user
+PROTECTED_USER_2 = "external"             # cannot reset this user
 MIN_PASSWORD_LEN = 6
 HISTORY_CHECK_COUNT = 3            # last N passwords cannot be reused
 HISTORY_MAX_STORE = 10             # keep up to N old passwords (optional)
@@ -76,7 +77,10 @@ def _validate_new_password(user_row, username: str, new_password: str):
   if len(new_password) < MIN_PASSWORD_LEN:
     raise ValueError(f"Password must be at least {MIN_PASSWORD_LEN} characters.")
 
-  if _norm_ci(username) == PROTECTED_USER.lower():
+  if _norm_ci(username) == PROTECTED_USER_1.lower():
+    raise ValueError("Password reset is restricted for this user.")
+
+  if _norm_ci(username) == PROTECTED_USER_2.lower():
     raise ValueError("Password reset is restricted for this user.")
 
   current_pw = user_row[COL_PASSWORD] or ""
@@ -103,8 +107,11 @@ def fp_get_security_question(username: str):
   if not user_row:
     raise ValueError("User not found.")
 
-  if _norm_ci(username) == PROTECTED_USER.lower():
-    raise ValueError("Password recovery is disabled for this user.")
+  if _norm_ci(username) == PROTECTED_USER_1.lower():
+    raise ValueError("Password reset is disabled for this user.")
+
+  if _norm_ci(username) == PROTECTED_USER_2.lower():
+    raise ValueError("Password reset is disabled for this user.")
 
   q_text = _norm(user_row[COL_SEC_Q])
   if not q_text:
@@ -123,8 +130,11 @@ def fp_check_security_answer(username: str, answer_text: str):
   if not user_row:
     raise ValueError("User not found.")
 
-  if _norm_ci(username) == PROTECTED_USER.lower():
-    raise ValueError("Password recovery is disabled for this user.")
+  if _norm_ci(username) == PROTECTED_USER_1.lower():
+    raise ValueError("Password reset is disabled for this user.")
+
+  if _norm_ci(username) == PROTECTED_USER_2.lower():
+    raise ValueError("Password reset is disabled for this user.")
 
   expected = _norm(user_row[COL_SEC_A])
   if not expected:
@@ -146,8 +156,11 @@ def fp_get_password_for_display(username: str):
   if not user_row:
     raise ValueError("User not found.")
 
-  if _norm_ci(username) == PROTECTED_USER.lower():
-    raise ValueError("Password recovery is disabled for this user.")
+  if _norm_ci(username) == PROTECTED_USER_1.lower():
+    raise ValueError("Password reset is disabled for this user.")
+
+  if _norm_ci(username) == PROTECTED_USER_2.lower():
+    raise ValueError("Password reset is disabled for this user.")
 
   return {"password": user_row[COL_PASSWORD] or ""}
 
